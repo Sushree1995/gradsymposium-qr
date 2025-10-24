@@ -2,184 +2,104 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dr. Claudia Sheedy Graduate Symposium 2026</title>
-  <meta name="description" content="Official webpage for the Dr. Claudia Sheedy Graduate Symposium 2026. Includes guidelines, registration form, QR code, and contact information for participants.">
-  <meta name="keywords" content="Symposium, Graduate, Abstract Guidelines, Oral Presentation, Registration, Agriculture, QR Code">
-  <meta property="og:title" content="Dr. Claudia Sheedy Graduate Symposium 2026">
-  <meta property="og:description" content="Learn more about the upcoming Dr. Claudia Sheedy Graduate Symposium 2026. Abstract guidelines, registration details, QR code, and contact information provided.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://sushree1995.github.io/gradsymposium-qr/">
-  <meta property="og:image" content="https://example.com/symposium-banner.jpg">
+  <meta name="description" content="Official webpage for the Dr. Claudia Sheedy Graduate Symposium 2026. Abstract guidelines, registration, countdown, QR code, and contacts.">
 
   <style>
-    :root {
-      --brand: #1f4e79;
-      --brand-dark: #163e5c;
-      --bg: #f4f4f9;
-      --text: #333;
+    :root{
+      --brand:#1f4e79;
+      --brand-dark:#163e5c;
+      --bg:#f4f4f9;
+      --text:#333;
+      --card-shadow:0 4px 16px rgba(0,0,0,.06);
     }
-    * { box-sizing: border-box; }
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      line-height: 1.6;
-      background: var(--bg);
-      color: var(--text);
+    *{box-sizing:border-box}
+    body{
+      margin:0; font-family:Arial,Helvetica,sans-serif; line-height:1.6;
+      background:var(--bg); color:var(--text);
     }
-    header {
-      background: var(--brand);
-      color: #fff;
-      text-align: center;
-      padding: 1.5rem 0;
+
+    /* ====== HEADER (match last year look) ====== */
+    .hero{
+      background: linear-gradient(180deg, #1f4e79 0%, #1c466d 60%, #163e5c 100%);
+      color:#fff; text-align:center; padding:36px 16px 28px;
     }
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 800;
-      margin: 0.2rem 0;
-      text-transform: uppercase;
+    .hero h1{
+      margin:0 0 8px; font-weight:900; font-size: clamp(2.2rem, 5vw, 3.2rem);
+      letter-spacing:.5px; text-shadow: 0 1px 0 rgba(0,0,0,.15);
     }
-    header p {
-      font-size: 1.1rem;
-      margin: 0.5rem 0 0;
+    .hero p{ margin:0; opacity:.95; font-size:1.05rem }
+
+    /* ====== NAV ====== */
+    nav{
+      background:var(--brand-dark); text-align:center; padding:10px 0; position:sticky; top:0; z-index:5;
     }
-    nav {
-      background: var(--brand-dark);
-      color: white;
-      text-align: center;
-      padding: 10px 0;
-      position: sticky;
-      top: 0;
-      z-index: 10;
+    nav a{
+      color:#fff; text-decoration:none; margin:0 14px; font-weight:700;
     }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 12px;
-      font-weight: bold;
+    nav a:hover{ text-decoration:underline }
+
+    /* ====== CONTENT ====== */
+    section{
+      margin:20px; padding:20px; background:#fff; border-radius:8px; box-shadow:var(--card-shadow);
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    section {
-      margin: 20px;
-      padding: 20px;
-      background: white;
-      border-radius: 8px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
-    }
-    h1, h2 {
-      color: var(--brand);
-    }
-    ul {
-      list-style: none;
-      padding-left: 0;
-    }
-    li { margin-bottom: 10px; }
-    input, textarea, select, button {
-      width: 100%;
-      margin: .5rem 0 1rem;
-      padding: 10px;
-      font-size: 1rem;
-    }
-    button {
-      background: var(--brand);
-      color: white;
-      border: none;
-      cursor: pointer;
-      border-radius: 6px;
-      font-weight: 700;
-    }
-    button:hover {
-      background: var(--brand-dark);
-    }
-    footer {
-      text-align: center;
-      padding: 1rem 0;
-      background: #333;
-      color: white;
-      margin-top: 20px;
-    }
-    .countdown {
-      color: #d9534f;
-      font-weight: bold;
-    }
-    .muted {
-      color: #666;
-      font-size: 0.94rem;
-    }
-    .qr-card {
-      border: 1px solid #e6e6e6;
-      border-radius: 8px;
-      padding: 16px;
-    }
-    .qr-grid {
-      display: grid;
-      grid-template-columns: 260px 1fr;
-      gap: 20px;
-      align-items: center;
-    }
-    @media (max-width: 720px) {
-      .qr-grid { grid-template-columns: 1fr; }
-    }
+    h2{ color:var(--brand); margin-top:0 }
+    ul{ list-style:none; padding-left:0 }
+    li{ margin-bottom:10px }
+    .muted{ color:#666; font-size:.95rem }
+    .countdown{ color:#d9534f; font-weight:700 }
+
+    /* ====== QR card ====== */
+    .qr-card{ border:1px solid #e6e6e6; border-radius:8px; padding:16px }
+    .qr-grid{ display:grid; grid-template-columns:260px 1fr; gap:20px; align-items:center }
+    @media (max-width:720px){ .qr-grid{ grid-template-columns:1fr } }
+    input,select,button{ width:100%; padding:10px; font-size:1rem; margin:.5rem 0 1rem }
+    button{ background:var(--brand); color:#fff; border:none; border-radius:6px; font-weight:700; cursor:pointer }
+    button:hover{ background:var(--brand-dark) }
+
+    footer{ text-align:center; padding:16px; background:#333; color:#fff; margin-top:24px }
   </style>
 
-  <!-- QRCode.js library -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" integrity="sha512-B+4QF3x5bNfW0e6nqg1cS6C+9D6l+u3bLJ0bH1M2jA8qQn+H+IY6pW4dJk7cQW2k8mM0O8XR3YvR3cQ6QwY0hA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <!-- QRCode.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
   <script>
-    function countdown() {
+    /* Countdown to NEW DEADLINE */
+    function countdown(){
       const deadline = new Date('December 19, 2025 23:59:59').getTime();
       const now = Date.now();
       const diff = deadline - now;
       const el = document.getElementById('countdown');
-      if (!el) return;
-      if (diff <= 0) {
-        el.textContent = "The submission deadline has passed.";
-        return;
-      }
-      const d = Math.floor(diff / 86400000);
-      const h = Math.floor((diff % 86400000) / 3600000);
-      const m = Math.floor((diff % 3600000) / 60000);
-      const s = Math.floor((diff % 60000) / 1000);
+      if(!el) return;
+      if(diff <= 0){ el.textContent = 'The submission deadline has passed.'; return; }
+      const d = Math.floor(diff/86400000);
+      const h = Math.floor((diff%86400000)/3600000);
+      const m = Math.floor((diff%3600000)/60000);
+      const s = Math.floor((diff%60000)/1000);
       el.textContent = `${d}d ${h}h ${m}m ${s}s remaining`;
     }
     setInterval(countdown, 1000);
 
-    function generateQR(text, size = 256) {
-      const container = document.getElementById('qrcode');
-      container.innerHTML = '';
-      new QRCode(container, {
-        text: text,
-        width: size,
-        height: size,
-        correctLevel: QRCode.CorrectLevel.H
-      });
+    /* QR generator */
+    function generateQR(text, size=256){
+      const box = document.getElementById('qrcode');
+      box.innerHTML = '';
+      new QRCode(box, { text, width:size, height:size, correctLevel: QRCode.CorrectLevel.H });
       setTimeout(() => {
-        const img = container.querySelector('img');
-        const link = document.getElementById('downloadLink');
-        if (img && img.src && link) {
-          link.href = img.src;
-          link.download = 'symposium-qr.png';
-          link.style.display = 'inline-block';
-        }
-      }, 100);
+        const img = box.querySelector('img'); const dl = document.getElementById('downloadLink');
+        if(img && img.src && dl){ dl.href = img.src; dl.download = 'symposium-qr.png'; dl.style.display='inline-block'; }
+      }, 80);
     }
-
-    function initQR() {
-      const defaultTarget = window.location.href;
+    function initQR(){
       const input = document.getElementById('qrText');
       const sizeSel = document.getElementById('qrSize');
+      const defaultTarget = window.location.href; // change to your form URL if you want it pre-set
       input.value = defaultTarget;
-      generateQR(defaultTarget, parseInt(sizeSel.value, 10));
+      generateQR(defaultTarget, parseInt(sizeSel.value,10));
       document.getElementById('makeQR').addEventListener('click', () => {
-        const val = input.value.trim();
-        const size = parseInt(sizeSel.value, 10) || 256;
-        if (!val) {
-          alert('Please enter text or a URL for the QR code.');
-          return;
-        }
+        const val = input.value.trim(); const size = parseInt(sizeSel.value,10) || 256;
+        if(!val) { alert('Please enter a URL or text'); return; }
         generateQR(val, size);
       });
     }
@@ -188,11 +108,13 @@
 </head>
 
 <body>
-  <header>
+  <!-- Big header like last year, but 2026 -->
+  <header class="hero">
     <h1>Dr. Claudia Sheedy Graduate Symposium 2026</h1>
-    <p>The symposium will take place at the <strong>Cafeteria Conference Room, Lethbridge Research and Development Centre</strong> on <strong>February 25th, 2026</strong>.</p>
+    <p>The symposium will take place at the Cafeteria Conference Room, Lethbridge Research and Development Centre on <strong>February 25th, 2026</strong>.</p>
   </header>
 
+  <!-- Nav -->
   <nav>
     <a href="#abstract-guidelines">Abstract Guidelines</a>
     <a href="#oral-presentation">Oral Presentation</a>
@@ -201,15 +123,18 @@
     <a href="#contact">Contact</a>
   </nav>
 
+  <!-- Abstract Guidelines -->
   <section id="abstract-guidelines">
     <h2>Abstract Guidelines</h2>
     <p><strong>Follow the detailed abstract submission guidelines:</strong></p>
     <p><a href="https://001gc-my.sharepoint.com/:w:/g/personal/sushree_dash_agr_gc_ca/EfW31HRcbUJKiWjM5FMGA3UBP1D5js6ZbzAGtMrsyKloPw?e=5qB4GV" target="_blank" rel="noopener noreferrer">Click here to view and download the Abstract Guidelines</a>.</p>
+
     <p><strong>Deadline for Submission:</strong> December 19th, 2025.</p>
-    <p class="muted"><em>Note:</em> The deadline may be extended upon request under certain circumstances. Please email <a href="mailto:aafc.lrcgradsymposium-symposiumetudiantlrc.aac@agr.gc.ca">aafc.lrcgradsymposium-symposiumetudiantlrc.aac@agr.gc.ca</a> and cc <a href="mailto:sushree.dash@agr.gc.ca">sushree.dash@agr.gc.ca</a> to request an extension.</p>
-    <p class="countdown" id="countdown"></p>
+    <p class="muted"><em>Note:</em> The deadline may be extended upon request under certain circumstances. Email <a href="mailto:aafc.lrcgradsymposium-symposiumetudiantlrc.aac@agr.gc.ca">aafc.lrcgradsymposium-symposiumetudiantlrc.aac@agr.gc.ca</a> and cc <a href="mailto:sushree.dash@agr.gc.ca">sushree.dash@agr.gc.ca</a> to request an extension.</p>
+    <p id="countdown" class="countdown"></p>
   </section>
 
+  <!-- Oral Presentation -->
   <section id="oral-presentation">
     <h2>Oral Presentation Guidelines</h2>
     <ul>
@@ -242,20 +167,22 @@
     </ul>
   </section>
 
+  <!-- Registration -->
   <section id="registration-form">
-    <h2>Registration Form</h2>
-    <p><a href="https://001gc-my.sharepoint.com/:w:/g/personal/sushree_dash_agr_gc_ca/Eb1QHiUzKalOu2Aoif1IJ-4BZ6aiNEqDhVqu1lLWXPjJjA?e=MM8ubB" target="_blank" rel="noopener noreferrer">Download Registration Form</a>.</p>
-    <p><strong>Submission Instructions:</strong> Send your abstract and registration form by email to <a href="mailto:aafc.lrcgradsymposium-symposiumetudiantlrc.aac@agr.gc.ca">aafc.lrcgradsymposium-symposiumetudiantlrc.aac@agr.gc.ca</a> and cc <a href="mailto:sushree.dash@agr.gc.ca">sushree.dash@agr.gc.ca</a>.</p>
+    <h2>Registration</h2>
+    <p><a href="https://001gc-my.sharepoint.com/:w:/g/personal/sushree_dash_agr_gc_ca/Eb1QHiUzKalOu2Aoif1IJ-4BZ6aiNEqDhVqu1lLWXPjJjA?e=MM8ubB" target="_blank" rel="noopener noreferrer">Download Registration Form</a></p>
+    <p><strong>Submission:</strong> Email your abstract and registration form to <a href="mailto:aafc.lrcgradsymposium-symposiumetudiantlrc.aac@agr.gc.ca">aafc.lrcgradsymposium-symposiumetudiantlrc.aac@agr.gc.ca</a> and cc <a href="mailto:sushree.dash@agr.gc.ca">sushree.dash@agr.gc.ca</a>.</p>
   </section>
 
+  <!-- QR Code -->
   <section id="qr">
     <h2>QR Code</h2>
-    <p class="muted">Use this tool to create a scannable QR code for the registration link, this page, or any resource. You can also download the PNG for posters and emails.</p>
+    <p class="muted">Create a QR for this page or your registration link, then download a PNG for posters and emails.</p>
     <div class="qr-card">
       <div class="qr-grid">
         <div><div id="qrcode" aria-label="Generated QR code" role="img"></div></div>
         <div>
-          <input id="qrText" type="url" placeholder="Paste URL or enter text" />
+          <input id="qrText" type="url" placeholder="Paste URL or enter text"/>
           <select id="qrSize">
             <option value="192">192 px</option>
             <option value="256" selected>256 px</option>
@@ -264,14 +191,15 @@
           </select>
           <button id="makeQR" type="button">Generate QR</button>
           <a id="downloadLink" href="#" style="display:none" download>Download PNG</a>
-          <p class="muted">Tip: Choose 512 px for high-quality printing. The download button appears after generation.</p>
+          <p class="muted">Tip: choose 512 px for high-quality printing.</p>
         </div>
       </div>
     </div>
   </section>
 
+  <!-- Contact -->
   <section id="contact">
-    <h2>Contact Information</h2>
+    <h2>Contact</h2>
     <ul>
       <li>Dr. Stephanie Terry: <a href="mailto:stephanie.terry@agr.gc.ca">stephanie.terry@agr.gc.ca</a></li>
       <li>Caitlin Watt: <a href="mailto:Caitlin.watt@agr.gc.ca">Caitlin.watt@agr.gc.ca</a></li>
